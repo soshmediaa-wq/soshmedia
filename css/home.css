@@ -107,7 +107,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
 .hero-copy{left:calc(489*var(--u));top:calc(501*var(--u));width:calc(516*var(--u));padding:0 calc(7*var(--u));text-align:center;font-family:"Inter",sans-serif;font-weight:300;font-size:calc(20.12*var(--u));line-height:calc(30.18*var(--u));color:var(--cream)}
 .btn-lime{display:flex;align-items:center;justify-content:center;background:var(--acid);color:var(--pitch);font-family:var(--mono);font-size:calc(14*var(--u));line-height:1.6;border-radius:100px;transition:background-color .3s,color .3s,transform .3s}
 .btn-lime:hover{background:var(--blush)}
-.hero-btn{left:calc(659*var(--u));top:calc(618*var(--u));width:calc(177*var(--u));height:calc(48*var(--u))}
+.hero-btn{left:calc(659*var(--u));top:calc(648*var(--u));width:calc(177*var(--u));height:calc(48*var(--u))}
 
 /* ───────── STATS ───────── */
 .stats{height:calc(820*var(--u));background:var(--forest)}
@@ -488,7 +488,7 @@ html.menu-open,html.menu-open body{overflow:hidden}
   .hero-strike{left:calc(316*var(--u));top:calc(279*var(--u) + var(--hs));width:calc(370*var(--u));height:calc(69*var(--u))}
   .hero-thinks{left:calc(384*var(--u));top:calc(162*var(--u) + var(--hs));width:calc(292*var(--u));height:calc(132*var(--u));font-size:calc(101.64*var(--u));line-height:calc(132.13*var(--u))}
   .hero-copy{left:calc(120*var(--u));top:calc(573*var(--u) + var(--hs));width:calc(580*var(--u));padding:0;font-size:calc(22*var(--u));line-height:calc(33*var(--u))}
-  .hero-btn{left:calc(305*var(--u));top:calc(712*var(--u) + var(--hs));width:calc(210*var(--u));height:calc(56*var(--u));font-size:calc(16*var(--u))}
+  .hero-btn{left:calc(305*var(--u));top:calc(742*var(--u) + var(--hs));width:calc(210*var(--u));height:calc(56*var(--u));font-size:calc(16*var(--u))}
 
   /* STATS — small row of four, drifting apart like desktop */
   .stats{height:calc(1340*var(--u))}   /* extra room between the badge and "What best we do" */
@@ -710,3 +710,13 @@ video::-webkit-media-controls,video::-webkit-media-controls-panel,video::-webkit
 html:not(.is-stacked) .stats-copy .stats-stamp{margin-left:calc(150*var(--u))!important;margin-top:calc(-4*var(--u))!important}
 html.is-phone .stats-copy .stats-stamp{margin-top:calc(-8*var(--u))!important}
 html.is-tablet .stats-copy .stats-stamp{margin-top:calc(-8*var(--u))!important}
+
+/* SEO kicker above "What we do" — sits in the centred grid, nudged up above the big words */
+.services-center > .services-kicker{max-width:calc(900*var(--u))!important;translate:0 calc(-215*var(--u));font-family:var(--mono);font-weight:400;font-size:max(11px,calc(14*var(--u)));line-height:1.5;letter-spacing:.12em;text-transform:uppercase;color:rgba(240,240,240,.75);text-align:center}
+@media (max-width:767px) and (orientation:portrait){
+  .services-center > .services-kicker{max-width:calc(350*var(--u))!important;translate:0 calc(-160*var(--u));font-size:calc(11*var(--u));letter-spacing:.06em}
+  .services-kicker span{display:block;height:0;overflow:hidden}
+}
+@media (min-width:768px) and (max-width:1100px) and (orientation:portrait){
+  .services-center > .services-kicker{translate:0 calc(-210*var(--u));font-size:calc(14*var(--u))}
+}
